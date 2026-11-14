@@ -11,19 +11,19 @@ export async function getRedisClient() {
   return client;
 }
 
-export async function getHomepageText() {
+export async function getHomepageContent() {
   try {
     const redis = await getRedisClient();
     return {
       hero: (await redis.get('home:hero')) || 'Welcome to TechHub',
-      about: (await redis.get('home:about')) || 'Browse our 10 laptops from Dell, Lenovo and Acer',
+      about: (await redis.get('home:about')) || 'Browse our 10 laptops from Dell, Lenovo and Acer and enjoy the ultimate tech experience.',
       cta: (await redis.get('home:cta')) || 'Explore our products',
     };
   } catch (error) {
     console.error("Failed to fetch from Redis:", error);
     return {
       hero: 'Welcome to TechHub',
-      about: 'Browse our 10 laptops from Dell, Lenovo and Acer',
+      about: 'Browse our 10 laptops from Dell, Lenovo and Acer and enjoy the ultimate tech experience.',
       cta: 'Explore our products',
     };
   }
