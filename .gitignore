@@ -1,6 +1,21 @@
-node_modules/
-.next/
-.env
-.env.local
+# Database
 pb_data/
+pocketbase
 pocketbase.exe
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.development
+.env.local
+.env.production
+.env.test
+
+# Next.js build cache
+.next/
+
+# OS files
+.DS_Store
+Thumbs.db
