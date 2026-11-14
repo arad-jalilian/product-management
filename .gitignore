@@ -6,7 +6,7 @@ pocketbase.exe
 # Dependencies
 node_modules/
 
-# Environment variables
+# Environment variable
 .env.local
 
 # Next.js build cache
